@@ -63,7 +63,7 @@ const Navbar = () => {
         {/* Image on the left */}
         <div onClick={() => location.reload()}>
           <img
-            src="./src/assets/cv_icon.png"
+            src="src/assets/cv_icon.png"
             alt="CV Icon"
             height={50}
             width={80}
