@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Modal from "./Modal"; // Import the Modal component
+import Icon from './assets/cv_icon.png'
 
 const aboutContent = `<h1 style='color: greenyellow'>About CV Easy</h1>
 
@@ -63,7 +64,7 @@ const Navbar = () => {
         {/* Image on the left */}
         <div onClick={() => location.reload()}>
           <img
-            src="./src/assets/cv_icon.png"
+            src={Icon}
             alt="CV Icon"
             height={50}
             width={80}
