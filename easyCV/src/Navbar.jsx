@@ -46,10 +46,47 @@ const Navbar = () => {
 
   return (
     <>
-      <nav style={{ backgroundColor: "black" }}>
-        <div className="navbar">
-          <div style={{cursor: 'pointer'}} onClick={() => handleModalOpen(aboutContent)}>About</div>
-          <div style={{cursor: 'pointer'}} onClick={() => handleModalOpen(contactContent)}>Contact</div>
+      <nav
+        style={{
+          backgroundColor: "black",
+          color: "white",
+          alignItems: "center",
+          display: "flex",
+          height: "60px",
+          justifyContent: "space-between",
+          textDecoration: "none",
+          fontSize: "larger",
+          position: "fixed",
+          width: "100%",
+        }}
+      >
+        {/* Image on the left */}
+        <div onClick={() => location.reload()}>
+          <img
+            src="./src/assets/cv_icon.png"
+            alt="CV Icon"
+            height={50}
+            width={80}
+            style={{borderLeft: '3px solid rgb(0, 255, 255)', cursor: "pointer"}}
+          />
+        </div>
+
+        {/* Menus on the right */}
+        <div className="navbar-menu">
+          <div
+            id="menu-about"
+            style={{ cursor: "pointer", paddingRight: "20px" }}
+            onClick={() => handleModalOpen(aboutContent)}
+          >
+            About
+          </div>
+          <div
+            id='menu-contact'
+            style={{ cursor: "pointer", paddingRight: "20px" }}
+            onClick={() => handleModalOpen(contactContent)}
+          >
+            Contact
+          </div>
         </div>
       </nav>
       <Modal isOpen={modalOpen} onClose={handleModalClose} content={modalContent} />

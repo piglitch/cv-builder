@@ -60,6 +60,7 @@ export default function App() {
 
   return(
     <div>
+      <img src="./src/assets/cv_icon.png" height={50} width={60} style={{position: 'fixed'}}/>
       <Navbar />
     <div className="App"> 
       <div className="details-container" style={{display: "flex", flexDirection: 'column', width: '850px', marginLeft: 'auto', marginRight: 'auto', alignItems: 'center', paddingTop: '100px', gap: '10px', height: 'fit-content', borderLeft: '1px solid aqua', borderRight: '1px solid red'}}>

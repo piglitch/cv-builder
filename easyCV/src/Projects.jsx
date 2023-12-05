@@ -63,6 +63,8 @@ export default function Projects({
 
   const selectProject = (e_id, e_title, e_description, e_technologies, e_repo, e_live) => {
     setEditing(true);
+    document.getElementById(`${e_id}`).style.backgroundColor = 'greenyellow';
+    document.getElementById(`${e_id}`).style.color = 'black';
     setEdit_id(e_id);
     setEdit_title(e_title);
     setEdit_description(e_description);
@@ -84,6 +86,8 @@ export default function Projects({
     selectedProject.technologies = technologies;
     selectedProject.live = live
     selectedProject.repo = repo
+    document.getElementById(`${edit_id}`).style.backgroundColor = 'navy';
+    document.getElementById(`${edit_id}`).style.color = 'white';
     setProjects([...projects]);
     setTitle('');
     setDescription('');
@@ -148,7 +152,7 @@ export default function Projects({
                 <p /><label>Live website: </label><input name="live" type="text" value={live} onInput={(e) => setLive(e.target.value)} onChange={handleProjectChange} />
                 <p /><label>Github Repo: </label><input name="repo" type="text" value={repo} onInput={(e) => setRepo(e.target.value)} onChange={handleProjectChange} />
               </form>
-              <button style={{marginLeft: '390px', padding: '5px', backgroundColor: 'greenyellow', border: 'none' }} onClick={addNewProject}>Add more</button>
+              <button style={{marginLeft: '390px', padding: '5px', backgroundColor: 'greenyellow', width: '60px', border: 'none' }} onClick={addNewProject}>Add</button>
             </div>
           )}
           {editing && (

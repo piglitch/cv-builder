@@ -9,17 +9,23 @@ span{
   margin: 0;
   padding: 0;
 }
-.navbar{
+.navbar-menu {
   color: white;
   align-items: center;
   display: flex;
-  height: 50px;
-  justify-content: right;
-  padding-right: 80px;
-  gap: 50px;
   text-decoration: none;
   font-size: larger;
+  background-color: black;
 }
+#menu-about:hover{
+  transition: .6s;
+  color: greenyellow;
+}
+#menu-contact:hover{
+  transition: .6s;
+  color: greenyellow;
+}
+
 .clear-icon{
   padding: 5px;
 }
@@ -27,6 +33,7 @@ span{
   fill: red;
 }
 .Prev{
+  margin-top: 60px;
   height: 900px;
   width: 700px;
   border-left: 1px solid aqua;
@@ -283,4 +290,8 @@ textarea{
 }
 #insta:hover{ 
   color: greenyellow;
+}
+button:hover{
+  scale: 1.05;
+  cursor: pointer;
 }
